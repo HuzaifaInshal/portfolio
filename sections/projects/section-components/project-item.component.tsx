@@ -74,6 +74,7 @@ const ProjectItem = ({ item, index }: Props) => {
 
             return (
               <img
+                key={src}
                 src={src}
                 alt={`${item.title} ${activeIndex + 1}`}
                 className={imageClasses}
