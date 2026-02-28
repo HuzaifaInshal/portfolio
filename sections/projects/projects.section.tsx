@@ -7,7 +7,7 @@ import { styles_SectionContainer } from "@/styles/section/section.styles";
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className={cn(styles_SectionContainer)}>
+    <section id="products" className={cn(styles_SectionContainer)}>
       <div className={cn("container mx-auto")}>
         <SectionHeading>PROJECTS</SectionHeading>
 

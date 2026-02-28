@@ -74,15 +74,20 @@
 }
 
 .dark {
-    --background: #232126;
-    --text: #c4c5c9;
-    --text-light: #969696;
+  --background: #232126;
+  --text: #c4c5c9;
+  --text-light: #969696;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--text);
   font-family: 'Neue Montreal', Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* ========================|| Container max widths modified ||======================== */
@@ -93,30 +98,35 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 /* --------> Small (≥576px) */
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
   }
 }
+
 /* --------> Medium (≥768px) */
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
   }
 }
+
 /* --------> Large (≥992px) */
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
   }
 }
+
 /* --------> Extra Large (≥1200px) */
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
   }
 }
+
 /* --------> Extra Extra Large (≥1400px) */
 @media (min-width: 1400px) {
   .container {

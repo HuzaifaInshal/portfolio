@@ -3,18 +3,25 @@ import { cn } from "@/utils/cn.util";
 
 interface Props {
   children: string;
+  link?: string
 }
 
-const HeaderItem = ({ children }: Props) => {
+const HeaderItem = ({ children, link }: Props) => {
+  const href = link || `#${children.toLowerCase()}`;
+
   return (
-    <li
-      className={cn(
-        styles_Typography["paragraph-base"],
-        "uppercase",
-        "list-none"
-      )}
-    >
-      {children}
+    <li className="list-none">
+      <a
+        href={href}
+        target={link ? '_blank' : undefined}
+        className={cn(
+          styles_Typography["paragraph-base"],
+          "uppercase",
+          "hover:opacity-60 transition-opacity duration-200"
+        )}
+      >
+        {children}
+      </a>
     </li>
   );
 };
