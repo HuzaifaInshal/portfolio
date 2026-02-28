@@ -38,7 +38,7 @@ const ProjectItem = ({ item, index }: Props) => {
     "overflow-hidden"
   );
 
-  const imageClasses = cn("max-w-full h-auto block");
+  const imageClasses = cn("w-full h-auto aspect-video block");
 
   return (
     <article
