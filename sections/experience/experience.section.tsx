@@ -4,6 +4,8 @@ import { styles_SectionContainer } from "@/styles/section/section.styles";
 import { cn } from "@/utils/cn.util";
 import ExperienceItem from "./section-components/experience-item.component";
 import InternshipItem from "./section-components/internship-item.component";
+import DividerLight from "@/components/divider-light.component";
+import { Fragment } from "react/jsx-runtime";
 
 const ExperienceSection = () => {
   return (
@@ -15,12 +17,18 @@ const ExperienceSection = () => {
           {experienceData
             .filter((each) => each.type === "job")
             .map((item, idx) => (
-              <ExperienceItem key={idx} item={item} />
+              <Fragment key={idx}>
+                <ExperienceItem item={item} />
+                <DividerLight />
+              </Fragment>
             ))}
           {experienceData
             .filter((each) => each.type === "internship")
             .map((item, idx) => (
-              <InternshipItem key={idx} item={item} />
+              <Fragment key={idx}>
+                <InternshipItem item={item} />
+                <DividerLight />
+              </Fragment>
             ))}
         </div>
       </div>

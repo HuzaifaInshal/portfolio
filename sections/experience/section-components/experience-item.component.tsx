@@ -4,6 +4,7 @@ import UnderlinedText from "@/components/underlined-text.component";
 import { styles_Typography } from "@/styles/typography/typography.styles";
 import { JobExperience } from "@/types/experience.type";
 import Image from "next/image";
+import ArrowUpright from "@/components/arrow-upright.component";
 
 interface Props {
   item: JobExperience;
@@ -76,7 +77,8 @@ const ExperienceItem = ({ item }: Props) => {
           className={cn(
             "w-full md:w-1/2",
             "h-fit",
-            "flex justify-end"
+            "flex flex-col items-start md:items-end",
+            'pb-6'
             // "sticky top-0"
           )}
         >
@@ -113,6 +115,22 @@ const ExperienceItem = ({ item }: Props) => {
                 </UnderlinedText>
               </div>
             </div>
+          </div>
+          <div className="flex items-center gap-5 flex-wrap">
+            {item?.moreLinks?.map((l, i) => (
+              <div>
+                <UnderlinedText>
+                  <a
+                    href={l.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles_Typography["paragraph-base-dark"]}
+                  >
+                    {l.title} <ArrowUpright />
+                  </a>
+                </UnderlinedText>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import SectionHeading from "@/components/section-heading.component";
 import { skillsData } from "@/config-and-data/skills.data";
 import { styles_SectionContainer } from "@/styles/section/section.styles";
 import SkillCategoryItem from "./section-components/skill-category-item.component";
+import DividerLight from "@/components/divider-light.component";
 
 const SkillsSection = () => {
     return (
@@ -15,7 +16,7 @@ const SkillsSection = () => {
                     {skillsData.map((item, i) => (
                         <Fragment key={i}>
                             <SkillCategoryItem item={item} />
-                            <hr className="border border-text-light/10" />
+                            <DividerLight />
                         </Fragment>
                     ))}
                 </div>

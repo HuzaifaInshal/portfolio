@@ -11,6 +11,10 @@ export interface JobExperience {
     endPeriod: string;
     details: string[];
   }>;
+  moreLinks?: {
+    title: string;
+    link: string
+  }[]
 }
 
 export interface InternshipExperience {
@@ -21,4 +25,8 @@ export interface InternshipExperience {
   period: string;
   location: string;
   details: string;
+  moreLinks?: {
+    title: string;
+    link: string
+  }[]
 }

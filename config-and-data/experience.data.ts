@@ -64,6 +64,10 @@ export const experienceData: (InternshipExperience | JobExperience)[] = [
     location: "Onsite - Karachi",
     details:
       "Performed my duties as an Internee in DAD/SWD Section of I.T. Department of Karachi Development Authority (KDA)"
+    , moreLinks: [{
+      link: 'https://drive.google.com/file/d/1kM6T1eSyCHzedaxG2qPi2ZoDaIwtcRzJ/view',
+      title: 'Certificate'
+    }]
   },
   {
     type: "internship",
@@ -74,6 +78,13 @@ export const experienceData: (InternshipExperience | JobExperience)[] = [
     location: "Hybrid - Karachi",
     details:
       "A 15 day internship focus on UI/UX based role with tools like Figma etc. Improvised the design for easypaisa app, a loan and mobile banking application. Also documented and presented the design in a comprehensive Case Study."
+    , moreLinks: [{
+      link: 'https://drive.google.com/file/d/1f9ZptQdyR0D0cjje6ZCczW8TgOzNVGNc/view',
+      title: 'Certificate'
+    }, {
+      link: '/projects/UIUX Case Study.jpg',
+      title: 'Case Study'
+    }]
   },
   {
     type: "internship",
@@ -84,6 +95,10 @@ export const experienceData: (InternshipExperience | JobExperience)[] = [
     location: "Onsite - Karachi",
     details:
       "Worked on a defective bottle detection system that utilizes the concepts of deep learning and computer vision. The tools that I utilized were ScikitLearn, openCV and Tensorflow, both are Python modules that provide functionalities in Deep Learning and Data Science."
+    , moreLinks: [{
+      link: 'https://drive.google.com/file/d/1DWNK_gurKThjNfl6FpRDYdKO0970EzVB/view',
+      title: 'Certificate'
+    }]
   }
 ];
 
