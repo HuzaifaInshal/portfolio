@@ -1,36 +1,56 @@
 export const projectsData = [
   {
-    id: "compound-interest",
-    title: "Compound Interest Calculator",
-    subtitle: "Web Development, Design, Idea",
-    year: "2024",
-    short:
-      "This side project started from my personal interest in the effects of compound interest.",
+    id: "letzfair",
+    title: "Letzfair - (associated with Zenkoders)",
+    subtitle: "Event management platform — led frontend development and contributed to backend tasks",
+    specialNot: "Note: This project is fully owned by Zenkoders. They hold all intellectual property rights; the codebase does not belong to me.",
+    year: "2025 - 2026",
     description: [
-      "My goal was to create a simple, user-friendly tool that hides all the complexity — something people could use regularly.",
-      "The project was developed using TypeScript, React, Vite, and deployed on Cloudflare Pages."
+      "My primary goal was to create the UI for the main web app and manage its integration.",
+      "I developed the admin panel and also contributed to backend development on a few occasions.",
+      "The project was developed using Next.js, Tailwind CSS, and TanStack.",
+      "It features advanced token-based authentication, real-time updates via WebSockets, and efficient middleware implementation."
     ],
-    website: "https://www.saving.tools",
     image: [
-      "https://images.unsplash.com/photo-1508948956644-0ecb2f6a9b9b?w=1600&auto=format&fit=crop"
+      "/projects/letzfair/2.png",
+      "/projects/letzfair/1.png",
+      "/projects/letzfair/3.png"
+    ],
+    moreLinks: [
+      {
+        title: "Letzfair",
+        link: "https://dev.letzfair.com"
+      },
+      {
+        title: "Zenkoders",
+        link: "https://zenkoders.com"
+      }
     ]
   },
   {
-    id: "drift-meditation",
-    title: "Drift Focus & Meditation",
-    subtitle: "iOS Development",
-    year: "2022",
-    short:
-      "As a part of a small team, I helped plan, develop and launch a native iOS application in the mental health sector.",
+    id: "mukh-one",
+    title: "Mukh.1 - (associated with Ibranext)",
+    subtitle: "Agentic AI-based orchestration platform developed with full-stack contributions.",
+    specialNot: "Note: This project is fully owned by Ibranext. They hold all intellectual property rights; the codebase does not belong to me.",
+    year: "2025",
     description: [
-      "Drift combined meditation & with popular focus methods to help users improve their focus. The app offered an extra level of customization, with the ability to create custom focus sessions to suit user needs.",
-      "The project was built with Swift and MVVM architecture, integrating RevenueCat for the in-app payments."
+      "Mukh.1 is an agentic AI-based orchestration platform.",
+      "I was responsible for both backend and frontend development.",
+      "The project was built using React.js and Express.js."
     ],
-    website: "#",
     image: [
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&auto=format&fit=crop"
+      "/projects/mukh/1.avif",
+      "/projects/mukh/2.avif"
+    ],
+    moreLinks: [
+      {
+        title: "Mukh.1",
+        link: "https://mukh.one/"
+      },
+      {
+        title: "Ibranext",
+        link: "https://ibranext.com"
+      }
     ]
   }
 ];

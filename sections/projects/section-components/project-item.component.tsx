@@ -4,6 +4,7 @@ import UnderlinedText from "@/components/underlined-text.component";
 import type { ProjectItem as PI } from "@/config-and-data/projects.data";
 import { styles_Typography } from "@/styles/typography/typography.styles";
 import ArrowUpright from "@/components/arrow-upright.component";
+import { AlertTriangle, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Props {
   item: PI;
@@ -41,15 +42,13 @@ const ProjectItem = ({ item, index }: Props) => {
 
   return (
     <article
-      style={{
-        direction: isEven ? "rtl" : undefined
-      }}
       className={cn("grid grid-cols-1 lg:grid-cols-12 gap-8 items-start")}
     >
       <div
         className={cn(
           "lg:col-span-7",
-          "flex flex-col gap-4 items-center justify-center"
+          "flex flex-col gap-4 items-center justify-center",
+          isEven ? "lg:order-last" : "lg:order-first"
         )}
       >
         <div className={imageWrapper}>
@@ -95,21 +94,7 @@ const ProjectItem = ({ item, index }: Props) => {
                 aria-label="Previous image"
                 className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M15 18L9 12L15 6"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <ChevronLeft />
               </button>
 
               <button
@@ -117,32 +102,17 @@ const ProjectItem = ({ item, index }: Props) => {
                 aria-label="Next image"
                 className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9 18L15 12L9 6"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <ChevronRight />
               </button>
             </div>
           </div>
         )}
       </div>
 
-      <div className="lg:col-span-2" />
+      <div className={cn("lg:col-span-2", isEven ? "lg:order-2" : "lg:order-2")} />
 
       <div
-        style={{ direction: "ltr" }}
-        className={cn("lg:col-span-3", "h-full")}
+        className={cn("lg:col-span-3", "h-full", isEven ? "lg:order-first" : "lg:order-last")}
       >
         <h3 className={styles_Typography["heading-3"]}>{item.title}</h3>
         <p className={cn(styles_Typography["paragraph-base-dark"], "mt-2")}>
@@ -155,23 +125,32 @@ const ProjectItem = ({ item, index }: Props) => {
         <div
           className={cn("mt-6 space-y-4", styles_Typography["paragraph-base"])}
         >
-          <p>{item.short}</p>
           {item.description.map((d, i) => (
             <p key={i}>{d}</p>
           ))}
+          {item.specialNot && (
+            <p>
+              <AlertTriangle className="inline-block mr-2 text-amber-500 align-text-bottom" size={18} />
+              {item.specialNot}
+            </p>
+          )}
         </div>
 
-        <div className={cn("mt-6")}>
-          <UnderlinedText>
-            <a
-              href={item.website}
-              target="_blank"
-              rel="noreferrer"
-              className={styles_Typography["paragraph-base-dark"]}
-            >
-              {item.website.replace(/^https?:\/\//, "")} <ArrowUpright />
-            </a>
-          </UnderlinedText>
+        <div className="flex items-center gap-5 flex-wrap">
+          {item.moreLinks.map((l, i) => (
+            <div className={cn("mt-6")}>
+              <UnderlinedText>
+                <a
+                  href={l.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles_Typography["paragraph-base-dark"]}
+                >
+                  {l.title} <ArrowUpright />
+                </a>
+              </UnderlinedText>
+            </div>
+          ))}
         </div>
       </div>
     </article>
