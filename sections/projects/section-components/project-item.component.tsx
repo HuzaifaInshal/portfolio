@@ -84,7 +84,7 @@ const ProjectItem = ({ item, index }: Props) => {
 
         {total > 1 && (
           <div className="flex items-center justify-between gap-2 w-full px-2">
-            <div className="text-white/90 text-sm">
+            <div className="text-text-light/90 text-sm">
               {activeIndex + 1} / {total}
             </div>
 
@@ -92,7 +92,7 @@ const ProjectItem = ({ item, index }: Props) => {
               <button
                 onClick={prev}
                 aria-label="Previous image"
-                className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white"
+                className="w-9 h-9 flex items-center justify-center rounded-full bg-text-light/10 hover:bg-text-light/20 text-text-light"
               >
                 <ChevronLeft />
               </button>
@@ -100,7 +100,7 @@ const ProjectItem = ({ item, index }: Props) => {
               <button
                 onClick={next}
                 aria-label="Next image"
-                className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white"
+                className="w-9 h-9 flex items-center justify-center rounded-full bg-text-light/10 hover:bg-text-light/20 text-text-light"
               >
                 <ChevronRight />
               </button>
