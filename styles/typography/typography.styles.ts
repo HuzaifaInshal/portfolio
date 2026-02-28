@@ -15,5 +15,6 @@ export const styles_Typography = {
   "footer-heading-1":
     "text-[32px] leading-[51px] md:text-[90px] md:leading-[144px] font-medium text-text",
   "footer-heading-2":
-    "text-[22px] leading-[36px] md:text-[45px] md:leading-[72px] font-medium text-text"
+    "text-[22px] leading-[36px] md:text-[45px] md:leading-[72px] font-medium text-text",
+  "skills": "text-[14px] leading-[20px] font-medium text-text-light",
 };

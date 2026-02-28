@@ -30,6 +30,11 @@ const ProjectsSection = dynamic(
   { ssr: false }
 );
 
+const SkillsSection = dynamic(
+  () => import("@/sections/skills/skills.section"),
+  { ssr: false }
+);
+
 const FooterSection = dynamic(
   () => import("@/sections/footer/footer.section"),
   { ssr: false }
@@ -42,6 +47,7 @@ const LandingPageView = () => {
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
+      <SkillsSection />
       <EducationSection />
       <ProjectsSection />
       <FooterSection />

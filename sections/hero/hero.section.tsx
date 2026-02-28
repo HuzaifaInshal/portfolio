@@ -1,5 +1,5 @@
 import { userData } from "@/config-and-data/user.data";
-import { styles_SectionContainer } from "@/styles/section/section.styles";
+import { styles_SectionContainer_hero } from "@/styles/section/section.styles";
 import { styles_Typography } from "@/styles/typography/typography.styles";
 import { cn } from "@/utils/cn.util";
 import Socials from "./section-components/socials.component";
@@ -9,7 +9,7 @@ const HeroSection = () => {
     <section
       id="hero"
       className={cn(
-        styles_SectionContainer,
+        styles_SectionContainer_hero,
         "h-[calc(100dvh-104px)] md:h-[calc(100dvh-104px)]",
         "flex flex-col justify-around md:justify-evenly gap-15"
       )}
