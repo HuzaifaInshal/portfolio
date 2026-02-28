@@ -35,7 +35,8 @@ const ProjectItem = ({ item, index }: Props) => {
   const imageWrapper = cn(
     "bg-black p-6",
     "flex flex-col items-center justify-center",
-    "overflow-hidden"
+    "overflow-hidden",
+    'w-full'
   );
 
   const imageClasses = cn("w-full h-auto aspect-video block");
