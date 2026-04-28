@@ -23,7 +23,7 @@ export const userData = {
   aboutB:
     "Over the years, I’ve built user-focused products with clean architecture, strong engineering fundamentals, and AI-driven workflows to ship faster and smarter.",
   aboutC: [
-    "I am focused on shipping scalable and secure applications with Next.js and NestJS. I leverage AI to speed up development while relying on my strong fundamentals to write clean, maintainable code. I enjoy deep debugging, solving complex problems, and constantly improving my craft.",
+    "I am focused on shipping scalable and secure applications with Next.js, NestJS and ASP.NET. I leverage AI to speed up development while relying on my strong fundamentals to write clean, maintainable code. I enjoy deep debugging, solving complex problems, and constantly improving my craft.",
     "Alongside work, I explore vibecoding and AI workflows through side projects, where I experiment with them to continuously look for ways to integrate them into my professional workflows to streamline development and improve efficiency and overall engineering quality.",
     "However, vibecoding has never limited my drive to grow. I am currently learning Go, regularly practicing DSA-related problems, and continuously strengthening my expertise in system design and large-scale software architecture."
   ]
