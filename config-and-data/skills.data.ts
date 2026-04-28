@@ -6,13 +6,14 @@ export interface SkillCategory {
 export const skillsData: SkillCategory[] = [
   {
     category: "Backend",
-    skills: ["NestJS", "TypeORM", "Prisma", "ExpressJS", "NodeJS"]
+    skills: ["NestJS", "TypeORM", "Prisma", "ExpressJS", "NodeJS","ASP.Net"]
   },
   {
     category: "Frontend",
     skills: [
       "NextJS",
       "ReactJS",
+      "Angular",
       "Redux",
       "Zustand",
       "TailwindCSS",
