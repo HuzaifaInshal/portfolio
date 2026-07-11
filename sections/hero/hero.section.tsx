@@ -10,7 +10,7 @@ const HeroSection = () => {
       id="hero"
       className={cn(
         styles_SectionContainer_hero,
-        "h-[calc(100dvh-104px)] md:h-[calc(100dvh-104px)]",
+        "min-h-[calc(100dvh-104px)]",
         "flex flex-col justify-around md:justify-evenly gap-15"
       )}
     >
